@@ -35,9 +35,15 @@ namespace Reservations.Reservoom.Models
 
         public static bool operator ==(RoomID roomID1, RoomID roomID2)
         {
-            if (roomID1 == null && roomID2 == null) return true;
+            return true;
+            //if (roomID1 == null && roomID2 == null) return true;
 
-            return roomID1 != null && roomID1.Equals(roomID2);
+            //return roomID1 != null && roomID1.Equals(roomID2); 
+        }
+
+        public static bool operator !=(RoomID roomID1, RoomID roomID2)
+        {
+            return !(roomID1 == roomID2);
         }
     }
 }

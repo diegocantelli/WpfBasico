@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\App.xaml
-11407045341
+3-651115779
 
-10130055687
+12-1443967628
 193-1891726104
-MainWindow.xaml;
+MainWindow.xaml;Views\MakeReservationView.xaml;Views\ReservationListingView.xaml;
 
-False
+True
 

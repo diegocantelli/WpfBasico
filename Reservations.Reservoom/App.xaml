@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:Reservations.Reservoom"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--definindo um padding global para todos os botões da aplicação-->
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10 5" />
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="2"/>
+        </Style>
     </Application.Resources>
 </Application>

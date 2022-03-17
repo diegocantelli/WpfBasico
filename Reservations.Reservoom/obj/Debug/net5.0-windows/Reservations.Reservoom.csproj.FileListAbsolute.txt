@@ -20,3 +20,9 @@ C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\ref\Reservations.Reservoom.dll
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Reservations.Reservoom.pdb
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Reservations.Reservoom.genruntimeconfig.cache
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Views\MakeReservationView.g.cs
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Views\ReservationListingView.g.cs
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Views\MakeReservationView.baml
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Views\ReservationListingView.baml
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\App.baml
