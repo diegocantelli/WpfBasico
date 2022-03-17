@@ -19,7 +19,7 @@ namespace Reservations.Reservoom.Models
 
         public IEnumerable<Reservation> GetReservationsForUsers(string userName)
         {
-            return _reservationBook.GetReservationsForUser(userName);
+            return _reservationBook.GetAllReservations();
         }
 
         public void MakeReservation(Reservation reservation)

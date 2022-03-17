@@ -15,9 +15,9 @@ namespace Reservations.Reservoom.Models
             _reservations = new List<Reservation>();
         }
 
-        public IEnumerable<Reservation> GetReservationsForUser(string userName)
+        public IEnumerable<Reservation> GetAllReservations()
         {
-            return _reservations.Where(x => x.UserName == userName);
+            return _reservations;
         }
 
         public void AddReservation(Reservation reservation)
