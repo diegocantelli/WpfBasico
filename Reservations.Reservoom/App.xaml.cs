@@ -16,12 +16,18 @@ namespace Reservations.Reservoom
     /// </summary>
     public partial class App : Application
     {
+        private readonly Hotel _hotel;
+
+        public App()
+        {
+            _hotel = new Hotel("Diego Suítes");
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
                 //Configura o DataContext da MainWindow para apontar para MainViewModel
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(_hotel)
             };
 
             MainWindow.Show();
