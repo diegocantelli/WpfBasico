@@ -45,5 +45,10 @@ namespace Reservations.Reservoom.Models
         {
             return !(roomID1 == roomID2);
         }
+
+        public override string ToString()
+        {
+            return $"{FloorNumber} - {RoomNumber}";
+        }
     }
 }

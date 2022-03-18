@@ -1,5 +1,6 @@
 ﻿using Reservations.Reservoom.Exceptions;
 using Reservations.Reservoom.Models;
+using Reservations.Reservoom.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,29 +18,13 @@ namespace Reservations.Reservoom
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var hotel = new Hotel("Diego Suites");
-
-            try
+            MainWindow = new MainWindow()
             {
-                hotel.MakeReservation(new Reservation(
-                    new RoomID(1, 3),
-                    new DateTime(2000, 1, 1),
-                    new DateTime(2000, 1, 2),
-                    "Diego Cantelli"));
+                //Configura o DataContext da MainWindow para apontar para MainViewModel
+                DataContext = new MainViewModel()
+            };
 
-                hotel.MakeReservation(new Reservation(
-                    new RoomID(1, 3),
-                    new DateTime(2000, 1, 3),
-                    new DateTime(2000, 1, 4),
-                    "Diego Cantelli"));
-            }
-            catch (ReservationConflictException ex)
-            {
-                throw ex;
-            }
-
-            var reservations = hotel.GetReservationsForUsers("Diego Cantelli");
-
+            MainWindow.Show();
             base.OnStartup(e);
         }
     }

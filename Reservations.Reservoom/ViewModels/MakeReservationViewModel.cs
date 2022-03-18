@@ -9,9 +9,9 @@ namespace Reservations.Reservoom.ViewModels
 {
     public class MakeReservationViewModel : ViewModelBase
     {
-        private int _userName;
+        private string _userName;
 
-        public int UserName
+        public string UserName
         {
             get { return _userName; }
             set 

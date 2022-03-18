@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Reservations.Reservoom"
-             StartupUri="MainWindow.xaml">
+             >
     <Application.Resources>
         <!--definindo um padding global para todos os botões da aplicação-->
         <Style TargetType="Button">

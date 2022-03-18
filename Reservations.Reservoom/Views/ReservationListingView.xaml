@@ -66,7 +66,7 @@
                                 <GridViewColumn Header="Username">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="0 0 20 0" Text="{Binding Username}" />
+                                            <TextBlock Padding="0 0 20 0" Text="{Binding UserName}" />
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
