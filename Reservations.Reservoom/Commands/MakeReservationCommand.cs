@@ -1,5 +1,6 @@
 ﻿using Reservations.Reservoom.Exceptions;
 using Reservations.Reservoom.Models;
+using Reservations.Reservoom.Services;
 using Reservations.Reservoom.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,15 @@ namespace Reservations.Reservoom.Commands
     {
         private readonly Hotel _hotel;
         private readonly MakeReservationViewModel _makeReservationViewModel;
+        private readonly NavigationService _navigationService;
 
-        public MakeReservationCommand(MakeReservationViewModel makeReservationViewModel, Hotel hotel)
+        public MakeReservationCommand(MakeReservationViewModel makeReservationViewModel, Hotel hotel,
+            NavigationService navigationService)
         {
             _hotel = hotel;
             _makeReservationViewModel = makeReservationViewModel;
             _makeReservationViewModel.PropertyChanged += OnViewModelPropertyChanged;
+            _navigationService = navigationService;
         }
 
         //Necessário este evento para poder alterar o estado do botão em tempo real conforme o conteúdo do campo UserName
@@ -50,6 +54,7 @@ namespace Reservations.Reservoom.Commands
                 _hotel.MakeReservation(reservation);
                 MessageBox.Show("Reserva efetuada com sucesso!", 
                     "Success",MessageBoxButton.OK, MessageBoxImage.Information);
+                _navigationService.Navigate();
             }
             catch (ReservationConflictException ex)
             {

@@ -1,5 +1,7 @@
 ﻿using Reservations.Reservoom.Commands;
 using Reservations.Reservoom.Models;
+using Reservations.Reservoom.Services;
+using Reservations.Reservoom.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,13 +73,18 @@ namespace Reservations.Reservoom.ViewModels
             }
         }
 
+        private readonly NavigationService _navigationService;
+
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeReservationViewModel(Hotel hotel)
+        public MakeReservationViewModel(
+            Hotel hotel, 
+            NavigationService navigationService)
         {
-            SubmitCommand = new MakeReservationCommand(this, hotel);
-            CancelCommand = new CancelMakeReservationCommand();
+            _navigationService = navigationService;
+            SubmitCommand = new MakeReservationCommand(this, hotel, _navigationService);
+            CancelCommand = new NavigateCommand(_navigationService);
         }
 
     }
