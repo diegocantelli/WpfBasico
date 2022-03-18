@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Reservations.Reservoom.ViewModels
 {
@@ -66,6 +67,14 @@ namespace Reservations.Reservoom.ViewModels
                 _endDate = value;
                 OnPropertyChanged(nameof(EndDate));
             }
+        }
+
+        public ICommand SubmitCommand { get; }
+        public ICommand CancelCommand { get; }
+
+        public MakeReservationViewModel()
+        {
+
         }
 
     }

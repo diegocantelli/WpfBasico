@@ -105,10 +105,10 @@
             Grid.Row="4"
             Margin="0 25 0 0"
             Orientation="Horizontal">
-            <Button Command="" Content="Submit" />
+            <Button Command="{Binding SubmitCommand}" Content="Submit" />
             <Button
                 Margin="10 0 0 0"
-                Command=""
+                Command="{Binding CancelCommand}"
                 Content="Cancel">
                 <!--<Button.Style>
                     <Style  TargetType="Button">
