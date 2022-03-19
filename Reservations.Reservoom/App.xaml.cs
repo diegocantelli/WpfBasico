@@ -46,7 +46,7 @@ namespace Reservations.Reservoom
 
         private ReservationListingViewModel CreateReservationViewModel()
         {
-            return new ReservationListingViewModel(new Services.NavigationService(_navigationStore, CreateMakeReservationViewModel));
+            return new ReservationListingViewModel(_hotel, new Services.NavigationService(_navigationStore, CreateMakeReservationViewModel));
 
         }
     }
