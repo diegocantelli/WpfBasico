@@ -1,4 +1,6 @@
 ﻿using Reservations.Reservoom.Exceptions;
+using Reservations.Reservoom.Services.ReservationCreators;
+using Reservations.Reservoom.Services.ReservationProviders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,8 @@ namespace Reservations.Reservoom.Models
 {
     public class ReservationBook
     {
-        private readonly List<Reservation> _reservations;
+        private readonly IReservationProviders reservationProviders;
+        private readonly IReservationCreator reservationCreator;
         public ReservationBook()
         {
             _reservations = new List<Reservation>();

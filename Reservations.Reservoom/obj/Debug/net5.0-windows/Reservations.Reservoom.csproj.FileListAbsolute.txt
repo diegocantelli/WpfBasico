@@ -61,3 +61,5 @@ C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\bin\Debug\
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\bin\Debug\net5.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\bin\Debug\net5.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\obj\Debug\net5.0-windows\Reservations.Reservoom.csproj.CopyComplete
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\bin\Debug\net5.0-windows\Humanizer.dll
+C:\Users\pc-cantelli\source\repos\Reservations\Reservations.Reservoom\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll

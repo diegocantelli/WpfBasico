@@ -1,4 +1,6 @@
-﻿using Reservations.Reservoom.Exceptions;
+﻿using Microsoft.EntityFrameworkCore;
+using Reservations.Reservoom.DbContexts;
+using Reservations.Reservoom.Exceptions;
 using Reservations.Reservoom.Models;
 using Reservations.Reservoom.Stores;
 using Reservations.Reservoom.ViewModels;
@@ -19,6 +21,7 @@ namespace Reservations.Reservoom
     {
         private readonly Hotel _hotel;
         private readonly NavigationStore _navigationStore;
+        private const string CONNECTION_STRING = "Data Source=reservoom.db";
 
         public App()
         {
@@ -27,6 +30,13 @@ namespace Reservations.Reservoom
         }
         protected override void OnStartup(StartupEventArgs e)
         {
+            DbContextOptions options = new DbContextOptionsBuilder().UseSqlite(CONNECTION_STRING).Options;
+            using (ReservroomDbContext dbContext = new ReservroomDbContext(options))
+            {
+
+                dbContext.Database.Migrate();
+            }
+
             _navigationStore.CurrentViewModel = CreateMakeReservationViewModel();
 
             MainWindow = new MainWindow()
